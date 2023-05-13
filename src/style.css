@@ -1,0 +1,96 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+main.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+// ios style calculator classes
+.calculator {
+  width: 100%;
+  max-width: 500px;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.calculator__display {
+  width: calc(100% - 40px);
+  height: 100px;
+  background-color: #000;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.calculator__display__result {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.calculator__keys .calculator__keys__double {
+  grid-column: span 2;
+}
+
+.calculator__keys__key {
+  padding: 20px;
+  width: 100%;
+  background-color: orange;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.calculator__keys__key:hover {
+  background-color: #fff;
+  color: orange;
+}
+
+.calculator__keys__gray {
+  background-color: #a5a5a5;
+  color: #000;
+}
+.calculator__keys__gray:hover {
+  background-color: #333;
+  color: #a5a5a5;
+}
+
+.calculator__keys__number {
+  background-color: #333;
+  color: #fff;
+}
+.calculator__keys__number:hover {
+  background-color: #ddd;
+  color: #333;
+}
