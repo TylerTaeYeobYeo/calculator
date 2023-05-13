@@ -31,22 +31,26 @@ main.app {
 
 .calculator__display {
   width: 330px;
-  height: 100px;
+  /* height: 100px; */
   background-color: #000;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
-  text-overflow: clip;
+  overflow-x: auto;
+  /* text-overflow: clip; */
 }
 
 .calculator__display__result {
-  font-size: 5rem;
-  color: #fff;
-  font-weight: 300;
   margin-bottom: 10px;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: right;
+  border: none;
 }
 
 .calculator__keys {
