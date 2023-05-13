@@ -30,7 +30,7 @@ export class Calculator {
     this._calculatorDescription = `
       <div class="calculator">
         <div class="calculator__display">
-          <input class="calculator__display__result" type="text"></input>
+          <input class="calculator__display__result" type="text" disabled></input>
         </div>
         <div class="calculator__keys">
           <button class="calculator__keys__key calculator__keys__gray" data-action="clear">C</button>
