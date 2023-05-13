@@ -30,14 +30,16 @@ main.app {
 }
 
 .calculator__display {
-  width: calc(100% - 40px);
+  width: 330px;
   height: 100px;
   background-color: #000;
   border-radius: 10px;
-  margin: 20px;
+  padding: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .calculator__display__result {
