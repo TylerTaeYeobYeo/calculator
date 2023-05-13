@@ -128,12 +128,22 @@ export class Calculator {
         this._removeWrongDecimal();
         this._displayNumber();
       }
+      // operand
+      else if (/[-+*/]/.test(input)) {
+        console.log("hit");
+        this._writeOperator(this._enumarteOperator(input)!);
+        this._currentNumber = null;
+        this._displayNumber();
+      }
+      else if (input === "=") {
+
+      }
       else if (event.target) {
         this._currentNumber = null;
         this._writeNumber(target.value);
         this._displayNumber();
       }
-    })
+    });
   }
 
   private _writeDecimal() {
@@ -165,6 +175,16 @@ export class Calculator {
       this._currentNumber += value;
     }
     console.log("write number:", this._currentNumber);
+  }
+
+  private _enumarteOperator(value: string): Operator | null {
+    switch (value) {
+      case "+": return Operator.add;
+      case "-": return Operator.subtract;
+      case "*": return Operator.multiply;
+      case "/": return Operator.divide;
+      default: return null;
+    }
   }
 
   private _writeOperator(operator: Operator) {
